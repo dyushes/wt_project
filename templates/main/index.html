@@ -1,0 +1,40 @@
+{% extends 'main/header.html'%}
+
+{% block title %}
+Work and Travel
+{% endblock %}
+
+{% block body %}
+<body>
+
+
+    <div class="container py-3">
+        <ul class="hr">
+            <li><a class="nov-logo"></a></li>
+            <li><img class="h-center" src="/static/main/assets/photos/main_photo.jpg"></li>
+            <li><a class="help" href="#">Помощь</a></li>
+            <li>
+                <a class="supernova-button_tinted supernova-button_secondary" href="registration">
+                   Регистрация
+                </a>
+            </li>
+            <li>
+                <a class="supernova-button supernova-button_tinted" href="login">
+                   Вход
+                </a>
+            </li>
+        </ul>
+        <h1 class="bloko-header-promo-3">Работа найдётся для каждого</h1>
+        <input type="text" autocomplete="off" placeholder="Профессия, должность или место"
+               class="bloko-input" name="text" value="">
+
+        <a href="/jobvacancy">
+            <button type="submit" data-qa="search-button" data-page-analytics-event="searchButton.submit"
+                    class="bloko-button bloko-button_kind-primary bloko-button_stretched bloko-button_scale-large ">
+                <span class="supernova-search-submit-text">Найти работу</span>
+            </button>
+        </a>
+    </div>
+
+</body>
+{% endblock %}

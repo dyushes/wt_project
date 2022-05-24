@@ -1,0 +1,23 @@
+{% extends 'main/header.html'%}
+
+{% block title %}
+Work and Travel
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="container">
+        <h1>Список вакансий</h1>
+
+        {% for el in job_vacancy %}
+            <div class="alert alert-warning">
+                <h3>{{ el.name }}</h3>
+                <p>Описание:<br>{{ el.discription }}</p>
+                <p>Почасовая оплата:<br>{{ el.sellary }}$</p>
+                <p>{{ el.city }}, {{ el.city.region }}, {{ el.city.region.country }}</p>
+                <p>{{ el.owner}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+{% endblock %}
